@@ -261,3 +261,28 @@ test/rwf2000_manifest.csv
 *.mp4
 *.mov
 *.mkv
+
+# ==========================================
+# SAFEYE - ADDITIONAL LOCAL PROTECTIONS
+# ==========================================
+
+# Local downloaded data
+data/raw/
+data/downloads/
+external/
+
+# Additional generated output
+outputs/
+results/
+*.log
+
+# Windows-generated files
+Thumbs.db
+Desktop.ini
+
+# macOS-generated files
+.DS_Store
+
+# Local IDE configuration
+.vscode/
+.idea/
