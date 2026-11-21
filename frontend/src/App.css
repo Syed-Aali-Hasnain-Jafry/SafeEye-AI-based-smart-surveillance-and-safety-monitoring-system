@@ -1,0 +1,348 @@
+
+/* ======================================
+   1. Dashboard layout
+====================================== */
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f6fa;
+}
+
+/* ======================================
+   2. Sidebar
+====================================== */
+
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background-color: #111827;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 18px;
+  box-sizing: border-box;
+}
+
+.sidebar-header {
+  margin-bottom: 40px;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.sidebar-header p {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.sidebar-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-item {
+  width: 100%;
+  padding: 13px 15px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #d1d5db;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+  background-color: #1f2937;
+}
+
+.nav-item.active {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 30px;
+  font-size: 13px;
+}
+
+.sidebar-footer p {
+  margin-bottom: 5px;
+}
+
+.sidebar-footer span {
+  color: #9ca3af;
+  font-size: 11px;
+}
+
+/* ======================================
+   3. Main content
+====================================== */
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 32px;
+}
+
+/* ======================================
+   4. Header
+====================================== */
+
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.top-header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #111827;
+}
+
+.top-header p {
+  margin-top: 8px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  font-size: 13px;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #2563eb;
+}
+
+/* ======================================
+   5. Statistics
+====================================== */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.stat-card h3 {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.stat-card p {
+  margin: 15px 0 8px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.stat-card span {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* ======================================
+   6. Camera monitoring
+====================================== */
+
+.camera-section {
+  margin-bottom: 30px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #111827;
+}
+
+.section-heading span {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.camera-preview {
+  height: 330px;
+  background-color: #111827;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-placeholder {
+  text-align: center;
+  padding: 20px;
+}
+
+.camera-placeholder h3 {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.camera-placeholder p {
+  color: #9ca3af;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+/* ======================================
+   7. Tracking section
+====================================== */
+
+.tracking-section h2 {
+  color: #111827;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.tracking-placeholder {
+  padding: 25px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.tracking-placeholder p {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* ======================================
+   8. Responsive layout
+====================================== */
+
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .sidebar-footer {
+    display: none;
+  }
+
+  .top-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* ======================================
+   9. Video upload and playback
+====================================== */
+
+.upload-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.upload-button:hover {
+  background-color: #1d4ed8;
+}
+
+.video-input {
+  display: none;
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.camera-video {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  object-fit: contain;
+  background-color: #000000;
+  border-radius: 12px 12px 0 0;
+}
+
+.video-information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 18px;
+  background-color: #1f2937;
+  color: #ffffff;
+  border-radius: 0 0 12px 12px;
+  font-size: 13px;
+}
+
+.video-information button {
+  padding: 8px 12px;
+  background-color: #374151;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.video-information button:hover {
+  background-color: #4b5563;
+}
